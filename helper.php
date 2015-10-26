@@ -3,10 +3,10 @@
 
 function writeToDb($sensorName, $sensorVal){
 	$servername = "localhost";
-	$username = "pxleai1q_1402985";
-	$password = "rU6)$]cIVV_9";
-	$dbname = "pxleai1q_1402985";
-	$table = "smartsystems";
+	$username = "***";
+	$password = "***";
+	$dbname = "***";
+	$table = "***";
 
 	try {
 	    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
