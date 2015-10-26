@@ -10,11 +10,13 @@ $app->get('/hello/:name', function ($name) {
 
 $app->post('/ss/temperature/:value', function ($value) {
     //echo "Temperature value: $value °C";
-    echo writeToDb('temperature', $value);
+    $temp = floatval ( intval($value) / 100 );
+    echo writeToDb('temperature', $temp);
 });
 
-$app->post('/ss/lightsensor/:value', function ($value) {
-    echo writeToDb('lightsensor', $value);
+$app->post('/ss/:sensor/:value', function ($sensor, $value) {
+    //echo "Temperature value: $value °C";
+    echo writeToDb($sensor, $value);
 });
 
 $app->run();
